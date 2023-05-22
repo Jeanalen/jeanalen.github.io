@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Friend Registry</title>
+		<style>
+			form {
+				border: 1px solid #245a7e;
+				padding: 20px;
+				max-width: 500px;
+				margin: 0 auto;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+
+			input[type="text"],
+			input[type="email"],
+			input[type="tel"],
+			textarea {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 50px;
+				border: 1px solid #881374;
+				border-radius: 5px;
+				box-sizing: border-box;
+				font-size: 16px;
+			}
+
+			input[type="submit"] {
+				background-color: #410dcf;
+				color: white;
+				padding: 12px 20px;
+				border: none;
+				border-radius: 4px;
+				cursor: alias;
+				font-size: 16px;
+			}
+
+			input[type="submit"]:hover {
+				background-color: #346fa0;
+			}
+
+			h1 {
+				text-align: center;
+				font-family: "Times New Roman", Times, serif;
+				font-style: inherit;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Friend Registry</h1>
+		<form
+			action="https://script.google.com/macros/s/AKfycbwFpsDHLHaCRxw3dQrTxDvebJBoYdi-hpvlurmS8bZ2GYyzmnmyRYaCx3o4JdStmBzJ/exec"
+			method="post"
+		>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" />
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" />
+
+			<label for="phone">Phone:</label>
+			<input type="tel" id="phone" name="phone" />
+
+			<label for="birthday">Birthday:</label>
+			<input type="date" id="birthday" name="birthday" />
+
+			<label for="address">Address:</label>
+			<input type="text" id="address" name="address" />
+
+			<label for="interests">Interests:</label>
+			<textarea id="interests" name="interests"></textarea>
+
+			<input type="submit" value="Submit" />
+		</form>
+
+		<script>
+			// function to handle form submission
+			function handleSubmit(event) {
+				event.preventDefault(); // prevent form from reloading the page
+				const input1Value = document.getElementById("name").value;
+				const input2Value = document.getElementById("email").value;
+				const input3Value = document.getElementById("phone").value;
+				const input4Value = document.getElementById("birthday").value;
+				const input5Value = document.getElementById("address").value;
+				const input6Value = document.getElementById("interests").value;
+				const accessToken = "YOUR_ACCESS_TOKEN_HERE"; // obtain access token from Google
+				const fileName = "myData.txt"; // choose a file name for the uploaded file
+				const fileContent = `Input 1: ${input1Value}\nInput 2: ${input2Value}\nInput 3: ${input3Value}\nInput 4: ${input4Value}\nInput 5: ${input5Value}\nInput 6: ${input6Value}`; // prepare file content
+				const metadata = {
+					name: fileName,
+					mimeType: "text/plain",
+				};
+				const formData = new FormData();
+				formData.append(
+					"metadata",
+					new Blob([JSON.stringify(metadata)], {type: "application/json"})
+				);
+				formData.append("file", new Blob([fileContent], {type: "text/plain"}));
+				fetch(
+					"https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&access_token=" +
+						accessToken,
+					{
+						method: "POST",
+						body: formData,
+					}
+				)
+					.then((response) => response.json())
+					.then((data) => {
+						const fileId = data.id;
+						const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+						window.location.href = downloadLink;
+					});
+			}
+
+			// attach handleSubmit function to form submission
+			const myForm = document.getElementById("myForm");
+			myForm.addEventListener("submit", handleSubmit);
+		</script>
+	</body>
+</html>

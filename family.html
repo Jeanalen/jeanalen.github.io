@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+  }
+  
+details > summary {
+  padding: 4px;
+  width: 200px;
+  background-color: blue ;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  cursor: pointer;
+}
+
+details > p {
+  background-color: black;
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px #bbbbbb;
+}
+
+cite { 
+  font-style: italic;
+}
+
+code {
+  font-family: Consolas,"courier new";
+  color: #2e0142;
+  background-color: #fcdfee;
+  padding: 2px;
+  font-size: 100%;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+ }
+ 
+ footer {
+     text-align: center;
+ }
+
+ 
+ a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: auto;  
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;  
+}
+
+a:hover, a:active {
+  background-color: white;
+  color: black;
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11p  e;  
+}
+}
+
+address { 
+  display: block;
+  font-style: italic;
+} 
+
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+
+mark { 
+  background-color: powderblue;
+  color: black;
+}
+
+q, dfn {
+  color: gray;
+  font-style: italic;
+}
+
+strong { 
+  font-weight: bold;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.icon {
+  width: 50%;
+  border-radius: 50%;
+  margin-left: 25%;
+  margin-top: 20%;
+
+}
+
+
+
+
+</style>
+</head>
+
+
+<title>MY PAGE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<body class="w3-black">
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+<img class= "icon" src="mee.jpg" />
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-pink">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hovergrey">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+  
+</nav>
+
+<!-- Navbar on small screens -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+
+  </div>
+</div>
+
+
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-blue" id="home">
+		<h1 class="w3-jumbo"><span class="w3-hide-small"><dfn>I'm </dfn></span><dfn>Jeanalen Tabaranza </dfn></h1>
+		<h2>Computer Science Student</h2>
+		<img 		src="me.jpg" alt="girl" class="w3-image" width="992" height="1108">
+  </header>
+
+<main>
+	<div class="w3-content w3-justify w3-text-white w3-padding-64" id="home">
+		<h2 class="w3-text-light-grey"><b>Page all about</b></h2>
+		<hr style="width:200px" class="w3-opacity">
+		<p> <h1> <span style="color:blue;font-weight:bold">Greetings and welcome!</span> All of the people I cared about are discussed on this page.<br>
+		Therefore, it's important to make sure you are intentional about being there for the people you care about; in fact, research shows that having 
+		positive, supportive people in one's life when one is depressed can have a positive impact on one's recovery. Of course, you shouldn't sacrifice 
+		self-care in the process; instead, strive to find a balance between doing for oneself and doing for others. </h1></p>
+</main>
+	
+   <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
+       <article>
+    <h2><b>MY FAMILY</b></h2>
+	<hr style="width:200px" class="w3-opacity">
+	<p> My <abbr title="“Family means having someone to love you unconditionally in spite of you and your shortcomings. Family is loving and supporting one 
+	another even when it's not easy to do so. It's being the best person you could be so that you may inspire your love one">family</abbr> is my everything. 
+	My <span style="color:yellow;font-weight:bold">mother</span> is the best gift that God could have given me, even in the worst case. Despite the fact 
+	that our father abandoned us when I was a child, she has always been at my side. She led me in the right direction, supported my choices, helped me 
+	achieve my goals, and helped me make the right decisions for my life. Everyone can see how fortunate I am to have a mother like her and how proud I 
+	am that she is the best mother ever. My father and I are still in regular contact, and I appreciate and adore them both for the wise decisions they 
+	have made.I'm really grateful to my grandmother for providing us with financial support. <code>As long as I have them, I don't need anything, and I 
+	have the guts to pursue my goals.</code>As I also won't forget about my sister, who always supported my decisions in life and was happy of all of my 
+	accomplishments. <span style="color:pink;font-weight:bold">I'm extremely appreciative to have them all.</span></p> 
+    </div>
+</article>
+
+	<div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
+	    <article>
+    <h2><b> MY FOREVER BEST BUDDIES </b></h2>
+	<hr style="width:200px" class="w3-opacity">   
+	<details>
+	        <summary>My Friends</summary>
+         <p>Let me introduce them one by one this is
+         <table style="width:100%">
+         <thead style="text-align:center">
+            <tr>
+              <th>Name</th>
+              <th>Behavior</th>
+            </tr>
+         </thead>
+   <tbody>
+    <tr>
+      <td><ol>Cristine</ol></td>
+      <td><ul>
+            <li> This woman thought me how to love my self more than anything else</li>
+            <li>Always there through my breakdowns comforted me</li>
+            <li>She's The one who is approachable in our group</li>
+            <li>I love her for being her not fake just be her and I love her so much</li> 
+            <li>I used to call her my nanay, caring person for all of us </li> 
+            <li>Have a big dream and for her family. She's a responsible and loving daughter to Ampoloquio Fam</li> 
+      </ul></td>
+    </tr>
+
+     <tr>
+      <td><ol>Jonash</ol></td>
+      <td><ul>
+             <li>The one has matured mindset a down to earth person</li>
+              <li>a loving father to his baby </li>
+               <li>kind and gentlemen , used to love traveling and joy rides</li> 
+      </ul></td>
+    </tr>
+
+    <tr>
+      <td><ol>Jessa</ol></td>
+      <td><ul>
+            <li>She never settle for less</li>
+            <li>always do her Best to make her parents proud</li>
+            <li>she's comfortable to those person who is close to her</li>
+            <li>she often goes out with friends since she doesnt go out often before. A loving , sweet and caring person.</li>
+        </ul></td>
+      </tr>
+
+    <tr>
+      <td><ol>Ryle</ol></td>
+      <td><ul> 
+            <li>He craves a lot for attention</li>
+            <li>very nosy and likes to tease a lot</li> 
+            <li>likes travelling around with his motorcycle</li> 
+            <li>a very friendly person</li>
+            <li>a go with the flow kind of person at the same time has a big dream</li> 
+            <li>he's also gentlemen and a great friend</li>
+            <li>just often teases them often and he wanted to beloved</li>
+      </ul></td>
+    </tr>
+
+    <tr>
+      <td><ol>Raquel</ol></td>
+      <td><ul>
+            <li>A strong woman and matured one</li>
+            <li>won't settle for less</li>
+            <li>she knows her rights and is willing to fight over it</li> 
+            <li>A humble person</li> 
+            <li>has a lot of problem but still handle to smile</li>
+            <li>a silent type of person, curious , loving, caring and down to earth person</li> 
+            </ul></td>
+    </tr>
+
+    <tr>
+      <td><ol>Daniel</ol></td>
+      <td><ul>
+            <li>A very talkative person often shrugs and laughs it off with his problems away</li>
+            <li>A funny person while at the same time you can rant towards him</li>
+            <li>approachable, friendly, a lowkey loving ,caring and sweet person, gentleman</li> 
+            <li>Will do a lot of things to support his family also he's hardworking</li>
+         </ul></td>
+    </tr>
+
+    <tr>
+      <td><ol>Julius</ol></td>
+      <td><ul>
+             <li>A happy go lucky person</li>
+             <li>always hide his problems with a smile</li> 
+             <li>lowkey loving and  caring person, love's travel, rides and food</li>
+             <li>Always make people laugh, gentleman, hardworking</li>
+        </ul></td>
+    </tr>
+
+    <tr>
+      <td><ol>Jhon Wenn</ol></td>
+      <td><ul>
+            <li>Loves to eat</li>
+            <li>always get heartbroken but still believe that he will find true love</li>
+            <li>a gentleman,loving and caring person, hardworking</li>
+            <li>funny, easy going, love's to enjoy life outgoing, approachable</li>
+        </ul></td>
+    </tr>
+
+ </tbody>
+</table>
+</p>       
+</details>
+	
+<p>These are my <code>closest friends,</code> who I can call on in times of need. No one can replace the affection I had for them. Even though <br> it can 
+be difficult to notice when a friendship is poor in some areas, it is always possible to better yourself and your relationship with a friend. Friends can 
+help you enjoy good times and provide support through terrible times. There are several reasons why I choose them, including the fact that even in good 
+times, <br> they remain my friends until we accomplish each of our objectives.</p></br> </div> 
+</article>
+	
+	
+
+<div class="slideshow-container" id="photos">
+		<h1 class="w3-text-light-grey"><b>Photos</b></h1>
+		<h2 class="w3-text-green"><ol><i>FAMILY</i></ol></h2>
+		<hr style="width:200px" class="w3-opacity">
+		     <aside>
+                <p> <nav><a href="/https://www.brainyquote.com/"><cite>Family is not an important  thing.It's everything.</a></cite> </nav> </p>
+        </aside>	
+
+		<div class="mySlides fade">
+			<div class="numbertext">1 / 8</div>
+			<img src="f1.jpg" style="width:100%">
+			<div class="text">Family Photos</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="numbertext">2 / 8</div>
+			<img src="f2.jpg" style="width:100%">
+			<div class="text">Family Photos</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 8</div>
+			<img src="f3.jpg" style="width:100%">
+			<div class="text">Family Photos</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="numbertext">4 / 8</div>
+			<img src="f4.jpg" style="width:100%">
+			<div class="text">Family Photos</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="numbertext">5 / 8</div>
+			<img src="f5.jpg" style="width:100%">
+			<div class="text">Family Photos</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="numbertext">6/ 8</div>
+			<img src="f6.jpg" style="width:100%">
+			<div class="text">Family Photos</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="numbertext">7 / 8</div>
+			<img src="f7.jpg" style="width:100%">
+			<div class="text">Family Photos</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="numbertext">8 / 8</div>
+			<img src="f8.jpg" style="width:100%">
+			<div class="text">Family Photost</div>
+		</div>
+			 
+			 
+	
+	
+	<br>
+	
+		<div style="text-align:center">
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+		</div>
+		
+		
+	<h2 class="w3-text-green"><ol><i>MY BEST BUDDIES</i></ol></h2>
+	<hr style="width:300px" class="w3-opacity">
+	<div class="slideshow-container">
+	        <aside>
+                <p><div style="width:200px;overflow:auto"><pre><q>A friend is someone who understands your past, believes in your future, and accepts you just the way you are.</pre></cite></q></p>         
+			</aside>	
+         <p><small>Slide to right.</small></p>
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<img src="b1.jpg" style="width:100%">
+				<div class="text">Friends Photos</div>
+			</div>
+		
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img src="b2.jpg" alt="My Best Buddies" style="width:100%">
+				<div class="text">Friends Photos</div>
+			</div>
+		
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img src="b3.jpg" style="width:100%">
+				<div class="text">Friends Photos</div>
+			</div>	
+		
+	</div>
+	<br>
+
+	<div style="text-align:center">
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+	</div>
+
+
+	
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<address>
+<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Bohol, Philippines</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +639382216287</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: jeanalenaznarabat@gmailcom</p>
+    </div><br>
+    <p>Visit hours: <time>10:00</time> to <time>21:00</time> every weekends</p>
+     <p>"If you chat on Monday to Friday <s>will not be answered.</s> Thank you!"</p>
+<p><sub>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (+639382216287).</sub></p>
+<p><sub>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (jeanalenaznarabat@gmail.com).</sub></p>
+ </address>
+  
+<footer >
+   <a class="fa fa-instagram w3-hover-opacity"; href="https://l.messenger.com/l.php?u=http%3A%2F%2Finstagram.com%2Fjean_bebe08&h=AT1X8b_F2sBr-sj0DHkdo1cAuCLw4zOJ2s0ZDO9MNW9VK-sD4S_bxwaZefjOGV318lBV0AYGaN42YIGq968MIQSDE7ydL82l30gJtABy93hw8yRH0vg3S7roaAtOZQDaLRgKDw"
+></a>
+  <a class="fa fa-facebook-official w3-hover-opacity"; href="https://www.facebook.com/shion.zed?mibextid=ZbWKwL" ></a>
+   <a class="fa fa-youtube w3-hover-opacity"; href="https://l.messenger.com/l.php?u=https%3A%2F%2Fyoutube.com%2F%40jeanalentabaranza&h=AT1X8b_F2sBr-sj0DHkdo1cAuCLw4zOJ2s0ZDO9MNW9VK-sD4S_bxwaZefjOGV318lBV0AYGaN42YIGq968MIQSDE7ydL82l30gJtABy93hw8yRH0vg3S7roaAtOZQDaLRgKDw"></a>
+   <a class="fa fa-linkedin w3-hover-opacity"; href="www.linkedin.com/in/jeanalen-tabaranza-9981ba267"></a>
+  <!-- End footer -->
+  </footer>
+  
+
+</body>
+</html>
