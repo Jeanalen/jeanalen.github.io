@@ -1,63 +1,478 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>WELCOME TO MY PAGE</title>
-		<link rel="stylesheet" type="text/css" href="homepage.css" />
-	</head>
-	<body>
-		<header>
-			<h1>My Web Page</h1>
-		</header>
-		<br />
-		<ul>
-			<li>
-				<a
-					href="index.html"
-					style="background-color: rgb(255, 1, 149); color: rgb(255, 255, 255)"
-				>
-					HOME
-				</a>
-			</li>
-			<li><a href="contact.html"> CONTACT </a></li>
-			<li><a href="adress.html"> ADDRESS </a></li>
-			<li><a href="about.html"> ABOUT US </a></li>
-		</ul>
-		<br />
-		<div class="leftcolumn">
-			<img class="imgcenter" src="me.png" />
-			<p><a href="aboutme(2).html"> About Me WebPage </a></p>
-			<br />
-			<img class="imgcenter" src="funnyme.png" />
-			<p><a href="me1.html"> Funny Me WebPage </a></p>
-			<br />
-			<img class="imgcenter" src="aboutme.png" />
-			<p><a href="family.html"> Family WebPage </a></p>
-			<br />
-			<img class="imgcenter" src="boholmap.png" />
-			<p><a href="mapping.html"> Bohol Map WebPage </a></p>
-			<br />
-		</div>
-		<div class="middlecolumn">
-			<img class="imgcenter" src="photos.png" />
-			<p><a href="DOMYPHOTOSS.HTML"> My Photos WebPage </a></p>
-			<br />
-			<img class="imgcenter" src="quotes.png" />
-			<p><a href="quote1.html"> Quote WebPage </a></p>
-			<br />
-			<img class="imgcenter" src="dayinUB.png" />
-			<p><a href="myVideo.html"> A Day in UB </a></p>
-			<br />
-		</div>
-		<div class="rightcolumn">
-			<img class="imgcenter" src="myfriends.png" />
-			<p><a href="myfriends.html"> Registry Form WebPage </a></p>
-			<br />
-			<img class="imgcenter" src="namelist.png" />
-			<p><a href="related (1).html"> Name List WebPage </a></p>
-			<br />
-			<img class="imgcenter" src="quotations.png" />
-			<p><a href="quotations.html"> Quotations WebPage </a></p>
-			<br />
-		</div>
-	</body>
+<html lang="en" class="no-js" >
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabaranza</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="icon" type="image/x-icon" href="images/fav.jpg">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="line"></div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header id="masthead" class="s-header">
+
+             <div class="s-header__block">
+                <div class="s-header__branding">
+                    <p class="site-title">
+                        <a href="index.html" rel="home">My Portfolio</a>
+                    </p>
+                </div>
+
+                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+            </div> <!-- end s-header__block -->
+
+            <div class="row s-header__nav-wrap">
+
+                <nav class="s-header__nav">
+                    <ul>
+                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
+                        <li><a href="#about" class="smoothscroll">About</a></li>
+                        <li><a href="#works" class="smoothscroll">Works</a></li>
+                        <li><a href="#colophon" class="smoothscroll">Contact</a></li>
+                    </ul>
+                </nav> <!-- end s-header__nav -->
+
+                <ul class="s-header__social">
+                    <li> 
+                        <a href="https://www.facebook.com/shion.zed">
+                            <svg xmlns="" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
+                            <span class="u-screen-reader-text">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Jeanalen/jeanalen.github.io">
+                            <svg xmlns="" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+                            <span class="u-screen-reader-text">Github</span>
+                        </a>
+                    </li>
+                    
+                </ul>  <!-- end s-header__social -->
+
+            </div> <!-- end s-header__nav-wrap -->
+
+        </header> <!-- end s-header -->
+
+
+        <!-- intro
+        ================================================== -->
+        <section id="intro" class="s-intro">
+
+            <div class="row">
+                <div class="column lg-12 s-intro__content">
+
+                    <div class="s-intro__text">
+                        <h1 class="s-intro__text-huge animate-on-load">
+                            Jeanalen
+                        </h1>
+                       
+                    </div>
+
+                    <div class="s-intro__bg"></div>
+
+                </div>
+            </div>
+
+        </section> <!-- end s-intro -->
+
+
+        <!-- about
+        ================================================== -->
+        <section id="about" class="s-about">
+
+
+            <div class="s-about__block s-about__intro">
+
+                <div class="row">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle animate-on-load">About Me</h2>
+    
+                        <p class="attention-getter animate-on-load">
+                        Hello there! My name is Jeanalen Tabaranza, and I am a passionate and motivated student pursuing a Bachelor's degree in Computer Science at the University of Bohol.
+I have always been captivated by the fascinating world of technology and its limitless possibilities.
+Throughout my academic journey, I have developed a strong foundation in computer science principles and programming languages. 
+I am skilled a little bit in languages such as Java, C, and C++, and I enjoy exploring new technologies and frameworks.
+I am particularly interested in areas such as artificial intelligence, data science, and web development. 
+I have a variety of interests and pastimes outside of my job life. I like playing softball and badminton aside from that I love dancing and writing spoken poetry.
+These activities not only make me happy but also give me a creative outlet and support the development of a well-rounded worldview.
+I am a firm believer in the value of excellent communication and make it a point to promote courteous and candid discussion in all spheres of my life.
+ aim to create a lasting impression and motivate people to achieve their goals whether it be through my profession, connections with others, or participation in community projects.
+I believe that a well-rounded education goes beyond the classroom, which is why I am eager to gain practical experience through internships and projects. 
+I am constantly seeking opportunities to apply my knowledge and contribute to real-world applications of computer science.
+I am excited about the possibilities that lie ahead in the field of computer science. 
+My goal is to leverage my education and experiences to make a positive impact in the industry. 
+I aspire to be part of innovative projects that solve real-world challenges and push the boundaries of technology.
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- end s-about__intro -->
+
+
+        <!-- # works
+        ================================================== -->
+        <section id="works" class="s-works">
+
+            <div class="row">
+                <div class="column lg-12">
+                    <h2 class="text-pretitle">Selected Projects</h2>
+
+                    <p class="text-huge-title">
+                    Selected Projects I Have Worked On.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row folio-list block-lg-one-half block-stack-on-550" data-animate-block>
+
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-me.png" Title="About Me WebPage" data-size="1050x700">
+                                <img src="images/portfolio/skaterboy.jpg" 
+                                     srcset="images/portfolio/me.png 1x, images/portfolio/me@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                              
+                                <a href="aboutme(2).html" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">About Me</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>butngi ni</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-funnyme.png" title="Funnyme" data-size="1050x700">
+                                <img src="images/portfolio/minimalismo.jpg" 
+                                     srcset="images/portfolio/funnyme.png 1x, images/portfolio/funnyme@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                                
+                                <a href="me1.html" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">Funny Me</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>sajdgasfdgaj</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-aboutme.png" title="MyFamily" data-size="1050x700">
+                                <img src="images/portfolio/lamp.jpg" 
+                                     srcset="images/portfolio/aboutme.png 1x, images/portfolio/aboutme@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                              
+                                <a href="family.html" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">My family</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>dfgsgfadagsr</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-boholmap.png" title="Map" data-size="1050x700">
+                                <img src="images/portfolio/tulips.jpg" 
+                                     srcset="images/portfolio/boholmap.png 1x, images/portfolio/boholmap@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                              
+                                <a href="mapping.html" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">
+                                Bohol Map
+                            </h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>safdgsghgjkhgfd</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-photossss.png" title="gallery" data-size="1050x700">
+                                <img src="images/portfolio/rucksack.jpg" 
+                                     srcset="images/portfolio/photossss.png 1x, images/portfolio/photossss@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                               
+                                <a href="DOMYPHOTOSS.HTML" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">Photos of Mine</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>fhdrtyrtyrtytru</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-quotes.png" title="Quotes" data-size="1050x700">
+                                <img src="images/portfolio/woodcraft.jpg" 
+                                     srcset="images/portfolio/quotes.png 1x, images/portfolio/quotes@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                               
+                                <a href="quote1.html" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">Quotes</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>dsgdfhghjgjkhjkh</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-dayinUB.png" title="Da-dayInUB" data-size="1050x700">
+                                <img src="images/portfolio/woodcraft.jpg" 
+                                     srcset="images/portfolio/dayinUB.png 1x, images/portfolio/dayinUB@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                               
+                                <a href="myVideo.html" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">My Day at UB</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>dsgdfhghjgjkhjkh</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-myfriends.png" title="MyFriends" data-size="1050x700">
+                                <img src="images/portfolio/woodcraft.jpg" 
+                                     srcset="images/portfolio/myfriends.png 1x, images/portfolio/myfriends@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                               
+                                <a href="myfriends.html" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">Friends Registry Form</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>dsgdfhghjgjkhjkh</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-namelist.png" title="NameList" data-size="1050x700">
+                                <img src="images/portfolio/woodcraft.jpg" 
+                                     srcset="images/portfolio/namelist.png 1x, images/portfolio/namelist@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                               
+                                <a href="related (1).html" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">Name List Page</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>dsgdfhghjgjkhjkh</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-animate-el>
+                    <div class="folio-item">
+                        <div class="folio-item__thumb">
+                            <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-quotations.png" title="Quotations" data-size="1050x700">
+                                <img src="images/portfolio/woodcraft.jpg" 
+                                     srcset="images/portfolio/quotations.png 1x, images/portfolio/quotations@2x.png 2x" alt="">
+                            </a>
+                        </div>
+                        <div class="folio-item__info">
+                            <div class="folio-item__meta">
+                               
+                                <a href="quotations.html" title="Project Link" class="project-link">Project Link</a>
+                            </div>
+                            <h4 class="folio-item__title">Quotations</h4>
+                        </div>
+                        <div class="folio-item__caption">
+                            <p>dsgdfhghjgjkhjkh</p>
+                        </div>
+                    </div>
+                </div> <!-- end column -->
+    
+            </div> <!-- folio-list -->
+
+            
+
+        <!-- # site footer
+        ================================================== -->
+        <footer id="colophon" class="s-footer">
+
+            <div class="row s-footer__contact-header">
+                <div class="column lg-12">
+                    <h2 class="text-pretitle">Get In Touch</h2>
+
+                    <p class="text-huge-title">
+                        Feel free to reach out if you wanna collaborate with me, or simply have a chat.
+                    </p>
+                </div>
+            </div> <!-- end s-footer__content -->
+
+            <div class="row s-footer__contact-content">
+
+                <div class="column lg-5 md-6 stack-on-900 left-block">
+                    <p>
+                    Thank you for taking the time to learn a little bit about me. I am excited to connect, collaborate, and embark on new adventures together!"</p>
+                   
+                </div>
+
+                <div class="column lg-4 md-5 stack-on-900 right-block">
+
+        
+                        
+                        <address>
+<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Bohol, Philippines</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +639382216287</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: jeanalenaznarabat@gmailcom</p>
+    </div><br>
+    <p>Visit hours: <time>10:00</time> to <time>21:00</time> every weekends</p>
+     <p>"If you chat on Monday to Friday <s>will not be answered.</s> Thank you!"</p>
+<p><sub>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (+639382216287).</sub></p>
+<p><sub>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (jeanalenaznarabat@gmail.com).</sub></p>
+ </address>
+                    </div>
+                    
+                </div>
+            </div> <!-- end s-footer__contact-content -->
+
+            <div class="row s-footer__bottom">
+                <div class="column ss-copyright">
+                    <span>© Copyright Jeanalen 2023</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                </div>
+
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"></path></svg>
+                    </a>
+                </div>
+            </div> <!-- end s-footer__bottom-->
+
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end s-pagewrap -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
 </html>
