@@ -48,12 +48,18 @@
 				font-family: "Times New Roman", Times, serif;
 				font-style: inherit;
 			}
+			.floating_btn {
+				position: fixed;
+				bottom: 30px;
+				right: 30px;
+				z-index: 99;
+			}
 		</style>
 	</head>
 	<body>
 		<h1>Friend Registry</h1>
 		<form
-			action="https://script.google.com/macros/s/AKfycbwFpsDHLHaCRxw3dQrTxDvebJBoYdi-hpvlurmS8bZ2GYyzmnmyRYaCx3o4JdStmBzJ/exec"
+			action="https://script.google.com/macros/s/AKfycbwHKNJdlgFx4YjQb4ihMnx2sVnj3e_s6w5pqsZJ_JPPl73MsRj49pxV39-AP7lE-vV_/exec"
 			method="post"
 		>
 			<label for="name">Name:</label>
@@ -76,6 +82,11 @@
 
 			<input type="submit" value="Submit" />
 		</form>
+		<div class="floating_btn">
+			<a href="homepage.html" target="_top">
+				<img src="home.png" style="height: 63px" />
+			</a>
+		</div>
 
 		<script>
 			// function to handle form submission
